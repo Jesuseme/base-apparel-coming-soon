@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:wght@300;400;600&display=swap);
 
 
 *
@@ -74,11 +74,11 @@ section
 
 .textBox h1 
 { 
-    font-size: 4rem;
+    font-size: 5rem;
     text-transform: uppercase;
     width: 50%;
-    font-weight: 300;
-    letter-spacing: 17px;
+    font-weight: 700;
+    letter-spacing: 16px;
     margin: 0 auto;
     position: relative;
     left: -3rem;
@@ -90,6 +90,7 @@ section
 .textBox h1 span 
 {
     color: hsl(0, 36%, 70%);
+    font-weight: 300;
 }
 
 .textBox p 
@@ -123,11 +124,25 @@ section
 {
     border-radius: 30px;
     padding: 1rem 2rem;
-    border: 1px solid rgba(0,0,0,0.1); 
+    border: 1px solid hsl(0, 36%, 70%); 
     width: 100%;
     margin: 0 auto;
     position: relative;   
     background: rgba(0,0,0,0);
+}
+
+.textBox form #email:focus 
+{
+    outline: none;
+}
+
+.textBox form #icon-error 
+{
+    z-index: 1000;
+    padding: 1rem;
+    position: relative;
+    left: -6.5rem;
+    visibility: hidden;
 }
 
 .textBox form #submit 
@@ -142,9 +157,27 @@ section
     font-family: 'Josefin Sans';
     position: relative;
     top:0rem;
-    left: -4rem;
+    left: -7rem;
     margin: 0 auto;
     box-shadow: 0 10px 20px  hsl(0, 80%, 86%);
+    transition: 0.5s;
+}
+
+.textBox form #submit:hover 
+{
+    background: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 44%, 82%));
+    padding: 15px 20px 15px 40px;
+}
+
+.textBox form #error
+{
+    position: absolute;
+    display: flex;
+    top: 6rem;
+    left: 0rem;
+    margin: 0 auto;
+    justify-content: center;
+    color: hsl(0, 93%, 68%);
 }
 
 .imgBox 
@@ -225,7 +258,7 @@ section
     }
 }
 
-@media (max-width:991px),( max-height: 690px)
+@media (max-width:991px) and ( max-height: 690px)
 {
     section 
     {
